@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Karthik L — Aspiring Business Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07080a;--bg2:#0e1013;--line:#23272d;--ink:#e8ebee;--mute:#8d949c;--chrome:#c9d0d8;--chrome2:#f4f7fa;--glow:rgba(190,205,220,.14);
+--chromeg:linear-gradient(120deg,#6f7780 0%,#f4f7fa 35%,#9aa3ad 55%,#ffffff 75%,#7b838c 100%);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root{color-scheme:dark}}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 16px/1.7 Inter,system-ui,sans-serif;overflow-x:hidden}
+#snow{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(7,8,10,.72);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav b{font:500 18px Fraunces,serif;letter-spacing:.04em;color:var(--chrome2)}
+nav div{display:flex;gap:22px;font-size:14px}
+nav a{color:var(--mute);text-decoration:none;transition:color .2s}
+nav a:hover,a:focus-visible{color:var(--chrome2)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--chrome);outline-offset:3px}
+main{position:relative;z-index:1}
+section{max-width:1040px;margin:0 auto;padding:90px 5vw}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;padding-top:60px}
+.hero p.role{color:var(--mute);font-size:17px;margin:0 0 10px}
+h1{font:300 clamp(56px,12vw,150px)/.95 Fraunces,serif;margin:0 0 28px;letter-spacing:-.03em;background:var(--chromeg);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 7s ease-in-out infinite alternate}
+@keyframes sheen{to{background-position:100% 0}}
+.hero .lead{max-width:560px;color:var(--chrome);font-size:18px}
+.btns{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.btn{padding:12px 26px;border:1px solid var(--chrome);border-radius:999px;color:var(--chrome2);text-decoration:none;font-size:14px;transition:background .25s,color .25s,box-shadow .25s}
+.btn:hover{background:var(--chrome2);color:var(--bg);box-shadow:0 0 28px var(--glow)}
+.btn.ghost{border-color:var(--line);color:var(--mute)}
+h2{font:300 clamp(30px,4.5vw,44px)/1.1 Fraunces,serif;margin:0 0 36px;color:var(--chrome2)}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:48px}
+.about p{margin:0;color:var(--chrome)}
+.facts{border-left:1px solid var(--line);padding-left:28px;display:grid;gap:18px;align-content:start}
+.facts span{display:block;color:var(--mute);font-size:13px}
+.facts strong{font-weight:400;color:var(--ink)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px}
+.panel{background:linear-gradient(160deg,var(--bg2),#0a0b0d);border:1px solid var(--line);border-radius:14px;padding:26px;transition:border-color .3s,box-shadow .3s}
+.panel:hover{border-color:#566069;box-shadow:0 0 40px var(--glow)}
+.panel h3{font:500 20px Fraunces,serif;margin:0 0 14px;color:var(--chrome2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips i{font-style:normal;font-size:13px;padding:4px 12px;border:1px solid var(--line);border-radius:999px;color:var(--chrome)}
+.tl{border-left:1px solid var(--line);padding-left:30px;margin-left:6px;position:relative}
+.tl::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--chrome2);box-shadow:0 0 14px var(--chrome)}
+.tl h3{margin:0;font:500 22px Fraunces,serif;color:var(--chrome2)}
+.tl small{color:var(--mute);font-size:14px}
+ul{padding-left:18px;color:var(--chrome);margin:14px 0 0}
+li{margin-bottom:6px}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.projects .panel p{color:var(--chrome);margin:12px 0 0;font-size:15px}
+.projects .tag{color:var(--mute);font-size:13px}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.edu .big{font:300 44px Fraunces,serif;background:var(--chromeg);-webkit-background-clip:text;background-clip:text;color:transparent;margin:10px 0 0}
+.edu small{color:var(--mute)}
+.contact{text-align:center;padding-bottom:120px}
+.contact .links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:10px}
+footer{position:relative;z-index:1;text-align:center;color:var(--mute);font-size:13px;padding:30px;border-top:1px solid var(--line)}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}
+.rv.on{opacity:1;transform:none}
+@media(max-width:720px){.about{grid-template-columns:1fr}.facts{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:22px}nav div{gap:14px;font-size:13px}nav div a:nth-child(n+4){display:none}}
+@media(prefers-reduced-motion:reduce){h1{animation:none}.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<canvas id="snow" aria-hidden="true"></canvas>
+<nav><b>Karthik L</b><div><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a></div></nav>
+<main>
+<section class="hero">
+<p class="role">Aspiring Business Analyst · Coimbatore, India</p>
+<h1>Karthik L</h1>
+<p class="lead">I turn complex data into clear business insights using Power BI, Excel and Python. Looking for a Business Analyst or Data Analyst internship.</p>
+<div class="btns"><a class="btn" href="#projects">View projects</a><a class="btn ghost" href="#contact">Get in touch</a></div>
+</section>
+
+<section id="about" class="rv">
+<h2>About</h2>
+<div class="about">
+<p>I’m a Computer Technology student with a strong foundation in data-driven decision-making and process optimization. I translate datasets into actionable insights using Power BI and market research frameworks, and I want to apply that technical skill and strategic thinking to create real business value.</p>
+<div class="facts">
+<div><span>Studying</span><strong>Bachelor of Computer Technology, 2024–2027</strong></div>
+<div><span>Based in</span><strong>Coimbatore, Tamil Nadu</strong></div>
+<div><span>Seeking</span><strong>Business / Data Analyst internship</strong></div>
+</div>
+</div>
+</section>
+
+<section id="skills" class="rv">
+<h2>Skills</h2>
+<div class="skills">
+<div class="panel"><h3>Business tools</h3><div class="chips"><i>Power BI</i><i>Microsoft Excel</i><i>PowerPoint</i><i>Word</i><i>Google Workspace</i></div></div>
+<div class="panel"><h3>Analytical</h3><div class="chips"><i>Python</i><i>Data analysis</i><i>Market research</i><i>Process optimization</i></div></div>
+<div class="panel"><h3>Soft skills</h3><div class="chips"><i>Communication</i><i>Critical thinking</i><i>Stakeholder management</i><i>Team collaboration</i></div></div>
+</div>
+</section>
+
+<section id="experience" class="rv">
+<h2>Experience</h2>
+<div class="tl">
+<h3>Python with Data Analytics Intern</h3>
+<small>Access Tecno Soft</small>
+<ul>
+<li>Used Python for data analysis and processing to extract meaningful insights from datasets.</li>
+<li>Analyzed datasets to identify patterns, trends and relevant business insights.</li>
+<li>Applied data analytics techniques to support data-driven decision-making.</li>
+</ul>
+</div>
+</section>
+
+<section id="projects" class="rv">
+<h2>Projects</h2>
+<div class="projects">
+<div class="panel"><h3>Retail Sales Data Analysis</h3><span class="tag">Excel, Power BI</span><p>Analyzed retail sales data to identify trends and support business insights.</p></div>
+<div class="panel"><h3>Movie Rating Analysis</h3><span class="tag">Excel</span><p>Explored movie rating data to find patterns and trends.</p></div>
+<div class="panel"><h3>Student Performance Analysis</h3><span class="tag">Data analysis</span><p>Analyzed student performance data to identify trends and insights.</p></div>
+</div>
+</section>
+
+<section id="education" class="rv">
+<h2>Education and certifications</h2>
+<div class="edu">
+<div class="panel"><h3>Bachelor of Computer Technology</h3><small>KPR College of Arts, Science and Research, Coimbatore · 2024–2027</small><div class="big">6.0 / 10</div><small>CGPA</small></div>
+<div class="panel"><h3>Higher Secondary (Class XII)</h3><small>Kongu Vellalar Matric Hr Sec School, Karumathampatti · 2023–2024</small><div class="big">73.3%</div><small>Score</small></div>
+<div class="panel"><h3>Certifications</h3><ul style="margin-top:6px"><li>Digital Marketing — Maiyyam</li><li>Python with Data Analytics</li><li>NPTEL</li></ul></div>
+<div class="panel"><h3>Leadership</h3><ul style="margin-top:6px"><li>Business &amp; Analytics Club: organized case study competitions for 50+ participants.</li><li>Annual Symposium logistics coordinator: managed participant data tracking and resources.</li><li>Inter-college business quiz and case study participant.</li></ul></div>
+</div>
+</section>
+
+<section id="contact" class="contact rv">
+<h2>Let’s talk</h2>
+<p style="color:var(--chrome);max-width:480px;margin:0 auto 26px">Open to Business Analyst and Data Analyst internships. Send me a message.</p>
+<div class="links">
+<a class="btn" href="mailto:Karthikd308@gmail.com">Karthikd308@gmail.com</a>
+<a class="btn ghost" href="tel:+917448789305">+91 74487 89305</a>
+<a class="btn ghost" href="https://linkedin.com/in/karthik-l-0970b9344" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+</section>
+</main>
+<footer>© 2026 Karthik L</footer>
+
+<script>
+(function(){
+var c=document.getElementById('snow'),x=c.getContext('2d'),W,H,f=[],still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function size(){W=c.width=innerWidth;H=c.height=innerHeight}
+size();addEventListener('resize',size);
+for(var i=0;i<70;i++)f.push({x:Math.random()*2e3,y:Math.random()*2e3,r:Math.random()*2+.5,s:Math.random()*.6+.25,d:Math.random()*Math.PI*2});
+function draw(){
+x.clearRect(0,0,W,H);
+for(var i=0;i<f.length;i++){var p=f[i];
+if(!still){p.y+=p.s;p.d+=.01;p.x+=Math.sin(p.d)*.4}
+if(p.y>H){p.y=-5;p.x=Math.random()*W}
+if(p.x>W)p.x=0;if(p.x<0)p.x=W;
+x.beginPath();x.arc(p.x%W,p.y%H,p.r,0,6.283);x.fillStyle='rgba(215,224,235,'+(.25+p.r*.15)+')';x.fill()}
+if(!still)requestAnimationFrame(draw)}
+draw();
+var io=new IntersectionObserver(function(e){e.forEach(function(n){if(n.isIntersecting){n.target.classList.add('on');io.unobserve(n.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(n){io.observe(n)});
+})();
+</script>
+</body>
+</html>
